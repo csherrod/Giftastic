@@ -18,13 +18,15 @@ $(document).ready(function(buildButton) {
 
 
 // function buildQueryURL() {
-$("#search").on("click", function(search) {
-    search.preventDefault();
-
+$("#search").on("click", function(event) {
+    event.preventDefault();
     var searchValue = $("#inlineFormInputName2")
     .val()
     .trim();
-    console.log(searchValue);
+    var newButtons = $("<button class='givenTopics btn btn-outline-secondary'>");
+    newButtons.attr("data-topics", searchValue);
+    newButtons.text(searchValue);
+    $(".buttonHolder").append(newButtons);
 
     var queryURL =
     "https://api.giphy.com/v1/gifs/search?api_key=2gmU5dW54vDq1BJNHss3h7Mc4lgz12P2&q=" +
