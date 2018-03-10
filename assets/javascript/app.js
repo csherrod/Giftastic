@@ -4,6 +4,7 @@ var topics = [
     "Aresenal", "Aston Villa", "Bournemouth", "Burnley", "Chelsea", "Crystal Palace",
     "Everton", "Fulham", "Hull City", "Leicester City", "Liverpool", "Manchester City",
     "Manchester United", "New Castle United", "Stoke City", "Tottenham Hotspur"];
+var searchValue;
 
 //make sure buttons have data attributes
 $(document).ready(function(buildButton) {
@@ -27,7 +28,13 @@ $("#search").on("click", function(event) {
     newButtons.attr("data-topics", searchValue);
     newButtons.text(searchValue);
     $(".buttonHolder").append(newButtons);
+});
 
+$("button").on("click", "data-topics", function() {
+    console.log("hey");
+    console.log(this);
+    var searchValue = $(this).attr("data-topics");
+    console.log(searchValue);
     var queryURL =
     "https://api.giphy.com/v1/gifs/search?api_key=2gmU5dW54vDq1BJNHss3h7Mc4lgz12P2&q=" +
     searchValue +
@@ -56,12 +63,14 @@ $("#search").on("click", function(event) {
 
 });
 
+// $(".buttonHolder").on("click", function(event) {
+//     console.log("dang");
+// });
+
+});
+
 // function clear() {
 //     $("#buttonHolder").empty();
 // }
 
-$(".buttonHolder").on("click", function(event) {
-    console.log($(this))
-    console.log($(this).data("topics"))
-});
-});
+
