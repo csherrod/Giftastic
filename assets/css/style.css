@@ -1,0 +1,14 @@
+.navcontainer {
+    color: #dddddd;
+    background-color: #0E0C0F;
+    font-family: 'Monoton', cursive;
+}
+.navbar-brand {
+    font-size: 48px;
+    margin: 0px;
+}
+#giflogo {
+    max-width: 100px;
+    max-height: 100px;
+    padding-left: 10px;
+}

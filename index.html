@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
         crossorigin="anonymous">
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Monoton" rel="stylesheet">
+
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 
@@ -20,21 +23,30 @@
 </head>
 
 <body>
+    <div class="navcontainer">
+        <nav class="navbar sticky-top justify-content-center">
+            <p class="navbar-brand">Giftastic</p>
+            <div class="giphyimage">
+                    <img src="https://media.giphy.com/media/YJBNjrvG5Ctmo/giphy.gif" id="giflogo">
+                </div>
+        </nav>
+    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <div class="buttonHolder"></div>
+              
+                <div class="btncontainer"></div>
             </div>
         </div>
         <br>
         <br>
         <form class="form-inline">
             <label class="sr-only" for="inlineFormInputName2">Name</label>
-            <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Find me some gifs">
+            <input type="text" class="form-control mb-2 mr-sm-2" id="search" placeholder="Find me some gifs">
 
 
 
-            <button id="search" type="submit" class="btn btn-outline-dark mb-2">Search</button>
+            <button id="searchSubmit" type="submit" class="btn btn-outline-dark mb-2">Search</button>
         </form>
         <div class="row">
             <div class="col-md-12">
