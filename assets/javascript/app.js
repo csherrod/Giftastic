@@ -20,14 +20,14 @@ $(function () {
   var searchValue
 
   // make sure buttons have data attributes
-  $(document).ready(function (buildButton) {
+  $(document).ready(function () {
     for (var i = 0; i < topics.length; i++) {
       var topicButtons = $(
         "<button class='givenTopics btn btn-outline-secondary'>"
       )
       topicButtons.attr('data-topics', topics[i])
       topicButtons.text(topics[i])
-      $('.buttonHolder').append(topicButtons)
+      $('.btncontainer').append(topicButtons)
     }
   })
 
@@ -40,7 +40,7 @@ $(function () {
     var newButtons = $("<button class='givenTopics btn btn-outline-secondary'>")
     newButtons.attr('data-topics', searchValue)
     newButtons.text(searchValue)
-    $('.buttonHolder').append(newButtons)
+    $('.btncontainer').append(newButtons)
   })
 
   $('.button').on('click', 'data-topics', function () {
@@ -51,8 +51,7 @@ $(function () {
     var queryURL =
       'https://api.giphy.com/v1/gifs/search?api_key=2gmU5dW54vDq1BJNHss3h7Mc4lgz12P2&q=' +
       searchValue +
-      '&limit=10&offset=0&rating=PG-13&lang=en'
-
+      '&limit=10&offset=0&rating=PG-13&lang=en';
     $.ajax({
       url: queryURL,
       method: 'GET'
@@ -73,7 +72,7 @@ $(function () {
     })
   })
 
-  // $(".buttonHolder").on("click", function(event) {
+  // $(".btncontainer").on("click", function(event) {
   //     console.log("dang");
   // });
 
