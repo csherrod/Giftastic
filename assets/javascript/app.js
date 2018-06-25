@@ -20,26 +20,32 @@ var topics = [
 
 // Creates new btns based on topics array
 function createBtns () {
-  $('.btncontainer').empty()
+//   $('.btncontainer').empty()
   for (var i = 0; i < topics.length; i++) {
-    var topicButtons = $("<button class='givenTopics btn btn-outline-secondary'>").text(topics[i]).attr('data-topics', topics[i])
-    $('.btncontainer').append(topicButtons);
+    var topicButtons = $("<button class='givenTopics btn btn-outline-dark'>").text(topics[i]).attr('data-topics', topics[i])
+    $('.btncontainer').append(topicButtons)
   }
 };
 
 // This handles user input and creates a new button to add to other btns in container
-$('#searchSubmit').on('click', function (event) {
-  event.preventDefault()
-  var searchValue = $('#searchSubmit').val().trim();
-  var newButtons = $("<button class='givenTopics btn btn-outline-secondary'>").attr('data-topics', searchValue).text(searchValue)
-  $('.btncontainer').append(newButtons)
-  createBtns()
-});
+// $('#searchSubmit').on('click', function (event) {
+//   event.preventDefault()
+//   var searchValue = $('#searchSubmit').val().trim()
+//   var newButtons = $("<button class='givenTopics btn btn-outline-secondary'>").attr('data-topics', searchValue).text(searchValue);
+//   console.log(searchValue);
+//   console.log('does this work');
+//   $('.btncontainer').append(newButtons);
+
+  
+
+
+// })
 
 //   These are the event handler functions
 $(document).ready(function () {
-  $('.givenTopics').on('click', 'data-topics', function () {
-    console.log('hey')
+  createBtns()
+  $(document).on('click', '.givenTopics', function (userButton) {
+    $('.gifResults').empty();
     console.log(this)
     var searchValue = $(this).attr('data-topics')
     console.log(searchValue)
@@ -61,9 +67,23 @@ $(document).ready(function () {
         var gifInfo = $("<div class='gifDiv'>")
         gifInfo.append(image)
         gifInfo.append(rating)
-        $('#gifResults').append(gifInfo)
+        $('.gifResults').append(gifInfo)
         //   $(".givenTopics").append(topicButtons);
       }
     })
   })
-});
+  // This handles user input and creates a new button to add to other btns in container
+  $('#searchSubmit').on('click', function (event) {
+    event.preventDefault()
+    var userInput = $('#searchSubmit').val().trim();
+    topics.push(userInput);
+    var newButtons = $("<button class='givenTopics btn btn-outline-dark'>").attr('data-topics', userInput).text(userInput)
+    $('.btncontainer').append(newButtons);
+    console.log(userInput);
+    console.log('does this work')
+  })
+
+  $('.instructions').on('click', function () {
+$('.panel').slideToggle('slow');
+  })
+})

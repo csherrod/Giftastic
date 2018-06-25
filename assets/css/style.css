@@ -2,6 +2,7 @@
     color: #dddddd;
     background-color: #0E0C0F;
     font-family: 'Monoton', cursive;
+    margin-bottom: 10px;
 }
 .navbar-brand {
     font-size: 48px;
@@ -11,4 +12,37 @@
     max-width: 100px;
     max-height: 100px;
     padding-left: 10px;
+}
+.instructions {
+    color: #0E0C0F;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+}
+#scroll {
+    height: 25px;
+    width: 25px;
+}
+.panel {
+    display: none;
+    color: #dddddd;
+    background-color: #0E0C0F;
+    border-radius: 20px;
+    padding: 10px;
+}
+h2 {
+    font-family: 'Monoton', cursive;
+    text-align: center;
+}
+h5 {
+    text-align: center;
+}
+.gifResults {
+    border: 1px solid gray;
+}
+.gifdiv {
+    padding: 10px;
+}
+.gifs {
+    padding: 10px;
 }
