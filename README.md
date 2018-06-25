@@ -11,7 +11,7 @@ You need to have working knowledge of HTML, CSS, Javascript, JQuery and the Giph
 2.  Once you’ve cloned the repo or unzipped the files navigate to the index.html in the main directory.
 3. This is the homepage for the project.
 4. In your code editor you should be able to open this file to the default web browser to see what it looks like on your machine.
-5. If they app does not pull any data from Giphy you will need to get your own API key and replace they key in Giftastic=>assets=>javascript=>app.js. You can sign up for a Giphy API key [here.](https://developers.giphy.com/)
+5. If they app does not pull any data from Giphy you will need to get your own API key and replace they key in **Giftastic=>assets=>javascript=>app.js**. You can sign up for a Giphy API key [here.](https://developers.giphy.com/)
 6. Feel free to make changes and modifications to any of the within this particular repo. I also like to see how different people can make the project once they get inside the code so feel free to contact me to share your handy work.
 7. Have fun!
 
